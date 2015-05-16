@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D90D17E11B0706CE00DFAD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90D17E01B0706CE00DFAD21 /* AppDelegate.swift */; };
+		D90D17E41B0706CE00DFAD21 /* Freedom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D90D17E21B0706CE00DFAD21 /* Freedom.xcdatamodeld */; };
+		D90D17E61B0706CE00DFAD21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90D17E51B0706CE00DFAD21 /* ViewController.swift */; };
+		D90D17E91B0706CE00DFAD21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90D17E71B0706CE00DFAD21 /* Main.storyboard */; };
+		D90D17EB1B0706CE00DFAD21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D90D17EA1B0706CE00DFAD21 /* Images.xcassets */; };
+		D90D17EE1B0706CE00DFAD21 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90D17EC1B0706CE00DFAD21 /* LaunchScreen.xib */; };
+		D90D17FA1B0706CE00DFAD21 /* FreedomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90D17F91B0706CE00DFAD21 /* FreedomTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D90D17F41B0706CE00DFAD21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90D17D31B0706CE00DFAD21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D90D17DA1B0706CE00DFAD21;
+			remoteInfo = Freedom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D90D17DB1B0706CE00DFAD21 /* Freedom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freedom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90D17DF1B0706CE00DFAD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90D17E01B0706CE00DFAD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D90D17E31B0706CE00DFAD21 /* Freedom.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Freedom.xcdatamodel; sourceTree = "<group>"; };
+		D90D17E51B0706CE00DFAD21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D90D17E81B0706CE00DFAD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D90D17EA1B0706CE00DFAD21 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D90D17ED1B0706CE00DFAD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D90D17F31B0706CE00DFAD21 /* FreedomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreedomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90D17F81B0706CE00DFAD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90D17F91B0706CE00DFAD21 /* FreedomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreedomTests.swift; sourceTree = "<group>"; };
+		D90D18031B0706D600DFAD21 /* Freedom.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Freedom.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D90D17D81B0706CE00DFAD21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90D17F01B0706CE00DFAD21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D90D17D21B0706CE00DFAD21 = {
+			isa = PBXGroup;
+			children = (
+				D90D17DD1B0706CE00DFAD21 /* Freedom */,
+				D90D17F61B0706CE00DFAD21 /* FreedomTests */,
+				D90D17DC1B0706CE00DFAD21 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D90D17DC1B0706CE00DFAD21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D90D17DB1B0706CE00DFAD21 /* Freedom.app */,
+				D90D17F31B0706CE00DFAD21 /* FreedomTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D90D17DD1B0706CE00DFAD21 /* Freedom */ = {
+			isa = PBXGroup;
+			children = (
+				D90D18031B0706D600DFAD21 /* Freedom.entitlements */,
+				D90D17E01B0706CE00DFAD21 /* AppDelegate.swift */,
+				D90D17E51B0706CE00DFAD21 /* ViewController.swift */,
+				D90D17E71B0706CE00DFAD21 /* Main.storyboard */,
+				D90D17EA1B0706CE00DFAD21 /* Images.xcassets */,
+				D90D17EC1B0706CE00DFAD21 /* LaunchScreen.xib */,
+				D90D17E21B0706CE00DFAD21 /* Freedom.xcdatamodeld */,
+				D90D17DE1B0706CE00DFAD21 /* Supporting Files */,
+			);
+			path = Freedom;
+			sourceTree = "<group>";
+		};
+		D90D17DE1B0706CE00DFAD21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D90D17DF1B0706CE00DFAD21 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D90D17F61B0706CE00DFAD21 /* FreedomTests */ = {
+			isa = PBXGroup;
+			children = (
+				D90D17F91B0706CE00DFAD21 /* FreedomTests.swift */,
+				D90D17F71B0706CE00DFAD21 /* Supporting Files */,
+			);
+			path = FreedomTests;
+			sourceTree = "<group>";
+		};
+		D90D17F71B0706CE00DFAD21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D90D17F81B0706CE00DFAD21 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D90D17DA1B0706CE00DFAD21 /* Freedom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D90D17FD1B0706CE00DFAD21 /* Build configuration list for PBXNativeTarget "Freedom" */;
+			buildPhases = (
+				D90D17D71B0706CE00DFAD21 /* Sources */,
+				D90D17D81B0706CE00DFAD21 /* Frameworks */,
+				D90D17D91B0706CE00DFAD21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Freedom;
+			productName = Freedom;
+			productReference = D90D17DB1B0706CE00DFAD21 /* Freedom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D90D17F21B0706CE00DFAD21 /* FreedomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D90D18001B0706CE00DFAD21 /* Build configuration list for PBXNativeTarget "FreedomTests" */;
+			buildPhases = (
+				D90D17EF1B0706CE00DFAD21 /* Sources */,
+				D90D17F01B0706CE00DFAD21 /* Frameworks */,
+				D90D17F11B0706CE00DFAD21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D90D17F51B0706CE00DFAD21 /* PBXTargetDependency */,
+			);
+			name = FreedomTests;
+			productName = FreedomTests;
+			productReference = D90D17F31B0706CE00DFAD21 /* FreedomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D90D17D31B0706CE00DFAD21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = com.lps.www;
+				TargetAttributes = {
+					D90D17DA1B0706CE00DFAD21 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 8DEY49A633;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					D90D17F21B0706CE00DFAD21 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = D90D17DA1B0706CE00DFAD21;
+					};
+				};
+			};
+			buildConfigurationList = D90D17D61B0706CE00DFAD21 /* Build configuration list for PBXProject "Freedom" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D90D17D21B0706CE00DFAD21;
+			productRefGroup = D90D17DC1B0706CE00DFAD21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D90D17DA1B0706CE00DFAD21 /* Freedom */,
+				D90D17F21B0706CE00DFAD21 /* FreedomTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D90D17D91B0706CE00DFAD21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90D17E91B0706CE00DFAD21 /* Main.storyboard in Resources */,
+				D90D17EE1B0706CE00DFAD21 /* LaunchScreen.xib in Resources */,
+				D90D17EB1B0706CE00DFAD21 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90D17F11B0706CE00DFAD21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D90D17D71B0706CE00DFAD21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90D17E61B0706CE00DFAD21 /* ViewController.swift in Sources */,
+				D90D17E41B0706CE00DFAD21 /* Freedom.xcdatamodeld in Sources */,
+				D90D17E11B0706CE00DFAD21 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90D17EF1B0706CE00DFAD21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90D17FA1B0706CE00DFAD21 /* FreedomTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D90D17F51B0706CE00DFAD21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D90D17DA1B0706CE00DFAD21 /* Freedom */;
+			targetProxy = D90D17F41B0706CE00DFAD21 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D90D17E71B0706CE00DFAD21 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D90D17E81B0706CE00DFAD21 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D90D17EC1B0706CE00DFAD21 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D90D17ED1B0706CE00DFAD21 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D90D17FB1B0706CE00DFAD21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D90D17FC1B0706CE00DFAD21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D90D17FE1B0706CE00DFAD21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Freedom/Freedom.entitlements;
+				INFOPLIST_FILE = Freedom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D90D17FF1B0706CE00DFAD21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Freedom/Freedom.entitlements;
+				INFOPLIST_FILE = Freedom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D90D18011B0706CE00DFAD21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FreedomTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Freedom.app/Freedom";
+			};
+			name = Debug;
+		};
+		D90D18021B0706CE00DFAD21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FreedomTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Freedom.app/Freedom";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D90D17D61B0706CE00DFAD21 /* Build configuration list for PBXProject "Freedom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90D17FB1B0706CE00DFAD21 /* Debug */,
+				D90D17FC1B0706CE00DFAD21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D90D17FD1B0706CE00DFAD21 /* Build configuration list for PBXNativeTarget "Freedom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90D17FE1B0706CE00DFAD21 /* Debug */,
+				D90D17FF1B0706CE00DFAD21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D90D18001B0706CE00DFAD21 /* Build configuration list for PBXNativeTarget "FreedomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90D18011B0706CE00DFAD21 /* Debug */,
+				D90D18021B0706CE00DFAD21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D90D17E21B0706CE00DFAD21 /* Freedom.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D90D17E31B0706CE00DFAD21 /* Freedom.xcdatamodel */,
+			);
+			currentVersion = D90D17E31B0706CE00DFAD21 /* Freedom.xcdatamodel */;
+			path = Freedom.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D90D17D31B0706CE00DFAD21 /* Project object */;
+}
