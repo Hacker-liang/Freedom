@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5ks-MJ-9Cz">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Day Cost View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="DayCostViewController" customModule="Freedom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,140 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rG0-uN-2bC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cost_bkg.png" translatesAutoresizingMaskIntoConstraints="NO" id="NAO-3G-Zok">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rG0-uN-2bC" secondAttribute="trailing" id="5hZ-Ee-Q7f"/>
+                            <constraint firstItem="rG0-uN-2bC" firstAttribute="top" secondItem="NAO-3G-Zok" secondAttribute="bottom" id="CR7-1h-q52"/>
+                            <constraint firstItem="rG0-uN-2bC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="DqY-x8-AiZ"/>
+                            <constraint firstItem="rG0-uN-2bC" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Idd-7E-mPK">
+                                <variation key="widthClass=compact" constant="164"/>
+                            </constraint>
+                            <constraint firstItem="NAO-3G-Zok" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="JdW-VM-iGZ"/>
+                            <constraint firstItem="NAO-3G-Zok" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="NKz-Lc-VGg"/>
+                            <constraint firstAttribute="trailing" secondItem="NAO-3G-Zok" secondAttribute="trailing" id="S31-Rp-RFP"/>
+                            <constraint firstItem="rG0-uN-2bC" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="kHh-No-YC1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="rG0-uN-2bC"/>
+                                <exclude reference="NAO-3G-Zok"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="JdW-VM-iGZ"/>
+                                <exclude reference="NKz-Lc-VGg"/>
+                                <exclude reference="S31-Rp-RFP"/>
+                                <exclude reference="5hZ-Ee-Q7f"/>
+                                <exclude reference="CR7-1h-q52"/>
+                                <exclude reference="DqY-x8-AiZ"/>
+                                <exclude reference="Idd-7E-mPK"/>
+                                <exclude reference="kHh-No-YC1"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="rG0-uN-2bC"/>
+                                <include reference="NAO-3G-Zok"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="JdW-VM-iGZ"/>
+                                <include reference="NKz-Lc-VGg"/>
+                                <include reference="S31-Rp-RFP"/>
+                                <include reference="5hZ-Ee-Q7f"/>
+                                <include reference="CR7-1h-q52"/>
+                                <include reference="DqY-x8-AiZ"/>
+                                <include reference="Idd-7E-mPK"/>
+                                <include reference="kHh-No-YC1"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="Gjj-YQ-seO"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2121" y="412"/>
+        </scene>
+        <!--Budegt View Controller-->
+        <scene sceneID="gIa-fk-LLt">
+            <objects>
+                <viewController storyboardIdentifier="budgetCtl" id="e7m-Oy-1LQ" customClass="BudegtViewController" customModule="Freedom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Iso-PR-1W3"/>
+                        <viewControllerLayoutGuide type="bottom" id="jCb-fA-eCP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="em9-gL-8Ql">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="content_films.png" translatesAutoresizingMaskIntoConstraints="NO" id="9tX-qT-fa5">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9tX-qT-fa5" firstAttribute="top" secondItem="em9-gL-8Ql" secondAttribute="top" id="A1n-KI-hPu"/>
+                            <constraint firstItem="9tX-qT-fa5" firstAttribute="bottom" secondItem="jCb-fA-eCP" secondAttribute="top" id="hgF-90-i4Y"/>
+                            <constraint firstAttribute="trailing" secondItem="9tX-qT-fa5" secondAttribute="trailing" id="kor-tc-fXK"/>
+                            <constraint firstItem="9tX-qT-fa5" firstAttribute="leading" secondItem="em9-gL-8Ql" secondAttribute="leading" id="wyE-5O-Dwu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="9tX-qT-fa5"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="A1n-KI-hPu"/>
+                                <exclude reference="hgF-90-i4Y"/>
+                                <exclude reference="kor-tc-fXK"/>
+                                <exclude reference="wyE-5O-Dwu"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="9tX-qT-fa5"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="A1n-KI-hPu"/>
+                                <include reference="hgF-90-i4Y"/>
+                                <include reference="kor-tc-fXK"/>
+                                <include reference="wyE-5O-Dwu"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGx-9B-6ng" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2866.5" y="399"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f2p-YD-any">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5ks-MJ-9Cz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xRf-rF-3ub">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="vER-zr-f5M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Grd-8K-RLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257" y="387"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="content_films.png" width="320" height="568"/>
+        <image name="cost_bkg.png" width="320" height="320"/>
+    </resources>
 </document>

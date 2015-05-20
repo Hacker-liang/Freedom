@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Budget" representedClassName="Freedom.Budget" syncable="YES">
+        <attribute name="budgetId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="budgetName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="costMoney" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="createTime" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="cycleLength" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isRepeat" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isValid" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="totalMoney" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="childBudget" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Budget" inverseName="childBudget" inverseEntity="Budget" syncable="YES"/>
+    </entity>
+    <entity name="Cost" representedClassName="Freedom.Cost" syncable="YES">
+        <attribute name="costId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createTime" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Budget" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="Cost" positionX="-54" positionY="72" width="128" height="75"/>
+    </elements>
 </model>

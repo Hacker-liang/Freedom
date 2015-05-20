@@ -9,11 +9,22 @@
 /* Begin PBXBuildFile section */
 		D90D17E11B0706CE00DFAD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90D17E01B0706CE00DFAD21 /* AppDelegate.swift */; };
 		D90D17E41B0706CE00DFAD21 /* Freedom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D90D17E21B0706CE00DFAD21 /* Freedom.xcdatamodeld */; };
-		D90D17E61B0706CE00DFAD21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90D17E51B0706CE00DFAD21 /* ViewController.swift */; };
 		D90D17E91B0706CE00DFAD21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90D17E71B0706CE00DFAD21 /* Main.storyboard */; };
 		D90D17EB1B0706CE00DFAD21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D90D17EA1B0706CE00DFAD21 /* Images.xcassets */; };
 		D90D17EE1B0706CE00DFAD21 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90D17EC1B0706CE00DFAD21 /* LaunchScreen.xib */; };
 		D90D17FA1B0706CE00DFAD21 /* FreedomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90D17F91B0706CE00DFAD21 /* FreedomTests.swift */; };
+		D9120A131B0B09E10070B34F /* DayCostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9120A111B0B09E10070B34F /* DayCostViewController.swift */; };
+		D9120A1B1B0B2BA20070B34F /* ZFModalTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = D9120A1A1B0B2BA20070B34F /* ZFModalTransitionAnimator.m */; };
+		D9120A201B0B2C050070B34F /* AnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9120A1D1B0B2C050070B34F /* AnimationDelegate.swift */; };
+		D9120A211B0B2C050070B34F /* CircularRevealAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9120A1E1B0B2C050070B34F /* CircularRevealAnimator.swift */; };
+		D9120A221B0B2C050070B34F /* CircularRevealTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9120A1F1B0B2C050070B34F /* CircularRevealTransitionAnimator.swift */; };
+		D9120A251B0B305E0070B34F /* BudegtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9120A231B0B305E0070B34F /* BudegtViewController.swift */; };
+		D9120A281B0B3D530070B34F /* content_films@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9120A271B0B3D530070B34F /* content_films@2x.png */; };
+		D9120A2B1B0B3FB50070B34F /* cost_bkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9120A2A1B0B3FB50070B34F /* cost_bkg@2x.png */; };
+		D9B55FD11B0B508800526D3F /* BudgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B55FD01B0B508800526D3F /* BudgetManager.swift */; };
+		D9B55FE41B0B851200526D3F /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B55FE31B0B851200526D3F /* Budget.swift */; };
+		D9B55FE61B0B851300526D3F /* Cost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B55FE51B0B851300526D3F /* Cost.swift */; };
+		D9B55FE81B0B8CC200526D3F /* Budget+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B55FE71B0B8CC200526D3F /* Budget+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +42,6 @@
 		D90D17DF1B0706CE00DFAD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D90D17E01B0706CE00DFAD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D90D17E31B0706CE00DFAD21 /* Freedom.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Freedom.xcdatamodel; sourceTree = "<group>"; };
-		D90D17E51B0706CE00DFAD21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D90D17E81B0706CE00DFAD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D90D17EA1B0706CE00DFAD21 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D90D17ED1B0706CE00DFAD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -39,6 +49,20 @@
 		D90D17F81B0706CE00DFAD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D90D17F91B0706CE00DFAD21 /* FreedomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreedomTests.swift; sourceTree = "<group>"; };
 		D90D18031B0706D600DFAD21 /* Freedom.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Freedom.entitlements; sourceTree = "<group>"; };
+		D9120A0D1B0B098F0070B34F /* Freedom-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Freedom-Bridging-Header.h"; path = "Libs/Freedom-Bridging-Header.h"; sourceTree = "<group>"; };
+		D9120A111B0B09E10070B34F /* DayCostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCostViewController.swift; sourceTree = "<group>"; };
+		D9120A191B0B2BA20070B34F /* ZFModalTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFModalTransitionAnimator.h; sourceTree = "<group>"; };
+		D9120A1A1B0B2BA20070B34F /* ZFModalTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFModalTransitionAnimator.m; sourceTree = "<group>"; };
+		D9120A1D1B0B2C050070B34F /* AnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDelegate.swift; sourceTree = "<group>"; };
+		D9120A1E1B0B2C050070B34F /* CircularRevealAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularRevealAnimator.swift; sourceTree = "<group>"; };
+		D9120A1F1B0B2C050070B34F /* CircularRevealTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularRevealTransitionAnimator.swift; sourceTree = "<group>"; };
+		D9120A231B0B305E0070B34F /* BudegtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudegtViewController.swift; sourceTree = "<group>"; };
+		D9120A271B0B3D530070B34F /* content_films@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "content_films@2x.png"; sourceTree = "<group>"; };
+		D9120A2A1B0B3FB50070B34F /* cost_bkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cost_bkg@2x.png"; sourceTree = "<group>"; };
+		D9B55FD01B0B508800526D3F /* BudgetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetManager.swift; sourceTree = "<group>"; };
+		D9B55FE31B0B851200526D3F /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Budget.swift; path = Freedom/Budget.swift; sourceTree = SOURCE_ROOT; };
+		D9B55FE51B0B851300526D3F /* Cost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cost.swift; path = Freedom/Cost.swift; sourceTree = SOURCE_ROOT; };
+		D9B55FE71B0B8CC200526D3F /* Budget+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Budget+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +104,17 @@
 		D90D17DD1B0706CE00DFAD21 /* Freedom */ = {
 			isa = PBXGroup;
 			children = (
+				D9B55FE71B0B8CC200526D3F /* Budget+Extension.swift */,
+				D9B55FCF1B0B507400526D3F /* Model */,
+				D9120A431B0B4FB30070B34F /* CoreData */,
+				D9120A291B0B3FA60070B34F /* Images */,
+				D9120A0C1B0B09720070B34F /* Libs */,
 				D90D18031B0706D600DFAD21 /* Freedom.entitlements */,
 				D90D17E01B0706CE00DFAD21 /* AppDelegate.swift */,
-				D90D17E51B0706CE00DFAD21 /* ViewController.swift */,
+				D9120A111B0B09E10070B34F /* DayCostViewController.swift */,
+				D9120A231B0B305E0070B34F /* BudegtViewController.swift */,
 				D90D17E71B0706CE00DFAD21 /* Main.storyboard */,
+				D9120A271B0B3D530070B34F /* content_films@2x.png */,
 				D90D17EA1B0706CE00DFAD21 /* Images.xcassets */,
 				D90D17EC1B0706CE00DFAD21 /* LaunchScreen.xib */,
 				D90D17E21B0706CE00DFAD21 /* Freedom.xcdatamodeld */,
@@ -95,6 +126,7 @@
 		D90D17DE1B0706CE00DFAD21 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D9120A0D1B0B098F0070B34F /* Freedom-Bridging-Header.h */,
 				D90D17DF1B0706CE00DFAD21 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -115,6 +147,59 @@
 				D90D17F81B0706CE00DFAD21 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D9120A0C1B0B09720070B34F /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				D9120A1C1B0B2C050070B34F /* CircularRevealAnimator */,
+				D9120A181B0B2BA20070B34F /* ZFModalTransitionAnimator */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		D9120A181B0B2BA20070B34F /* ZFModalTransitionAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				D9120A191B0B2BA20070B34F /* ZFModalTransitionAnimator.h */,
+				D9120A1A1B0B2BA20070B34F /* ZFModalTransitionAnimator.m */,
+			);
+			path = ZFModalTransitionAnimator;
+			sourceTree = "<group>";
+		};
+		D9120A1C1B0B2C050070B34F /* CircularRevealAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				D9120A1D1B0B2C050070B34F /* AnimationDelegate.swift */,
+				D9120A1E1B0B2C050070B34F /* CircularRevealAnimator.swift */,
+				D9120A1F1B0B2C050070B34F /* CircularRevealTransitionAnimator.swift */,
+			);
+			path = CircularRevealAnimator;
+			sourceTree = "<group>";
+		};
+		D9120A291B0B3FA60070B34F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D9120A2A1B0B3FB50070B34F /* cost_bkg@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		D9120A431B0B4FB30070B34F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D9B55FE51B0B851300526D3F /* Cost.swift */,
+				D9B55FE31B0B851200526D3F /* Budget.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D9B55FCF1B0B507400526D3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9B55FD01B0B508800526D3F /* BudgetManager.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +289,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D90D17E91B0706CE00DFAD21 /* Main.storyboard in Resources */,
+				D9120A2B1B0B3FB50070B34F /* cost_bkg@2x.png in Resources */,
 				D90D17EE1B0706CE00DFAD21 /* LaunchScreen.xib in Resources */,
+				D9120A281B0B3D530070B34F /* content_films@2x.png in Resources */,
 				D90D17EB1B0706CE00DFAD21 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,9 +310,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D90D17E61B0706CE00DFAD21 /* ViewController.swift in Sources */,
+				D9120A131B0B09E10070B34F /* DayCostViewController.swift in Sources */,
+				D9120A1B1B0B2BA20070B34F /* ZFModalTransitionAnimator.m in Sources */,
 				D90D17E41B0706CE00DFAD21 /* Freedom.xcdatamodeld in Sources */,
+				D9120A201B0B2C050070B34F /* AnimationDelegate.swift in Sources */,
+				D9B55FE81B0B8CC200526D3F /* Budget+Extension.swift in Sources */,
+				D9120A211B0B2C050070B34F /* CircularRevealAnimator.swift in Sources */,
+				D9B55FE61B0B851300526D3F /* Cost.swift in Sources */,
+				D9B55FD11B0B508800526D3F /* BudgetManager.swift in Sources */,
+				D9120A221B0B2C050070B34F /* CircularRevealTransitionAnimator.swift in Sources */,
 				D90D17E11B0706CE00DFAD21 /* AppDelegate.swift in Sources */,
+				D9B55FE41B0B851200526D3F /* Budget.swift in Sources */,
+				D9120A251B0B305E0070B34F /* BudegtViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,10 +448,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Freedom/Freedom.entitlements;
 				INFOPLIST_FILE = Freedom/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Freedom/Libs/Freedom-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -363,10 +463,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Freedom/Freedom.entitlements;
 				INFOPLIST_FILE = Freedom/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Freedom/Libs/Freedom-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -423,6 +526,7 @@
 				D90D17FF1B0706CE00DFAD21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D90D18001B0706CE00DFAD21 /* Build configuration list for PBXNativeTarget "FreedomTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +535,7 @@
 				D90D18021B0706CE00DFAD21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
