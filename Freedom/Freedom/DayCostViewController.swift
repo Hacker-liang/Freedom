@@ -23,8 +23,9 @@ class DayCostViewController: UIViewController, UINavigationControllerDelegate {
         self.navigationController?.navigationBarHidden = true;
         
         var budgetManager = BudgetManager.shareInstance()
-        budgetManager.createNewBudget()
-        var budget = budgetManager.currentBudget
+        var budget = budgetManager.createNewBudget()
+        budget.budgetName = "test"
+        budgetManager.saveBudgetChange()
     }
     
     override func viewWillDisappear(animated: Bool) {

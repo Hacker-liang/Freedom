@@ -13,14 +13,43 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var store = NSUbiquitousKeyValueStore.defaultStore()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "storeDidChange:", name: NSUbiquitousKeyValueStoreDidChangeExternallyNotification, object: store)
-        NSUbiquitousKeyValueStore.defaultStore().synchronize()
         
+        
+        let dc = NSNotificationCenter.defaultCenter()
+        dc.addObserverForName(NSPersistentStoreCoordinatorStoresWillChangeNotification, object: persistentStoreCoordinator, queue: NSOperationQueue.mainQueue(), usingBlock: { (note) -> Void in
+            println(NSPersistentStoreCoordinatorStoresWillChangeNotification)
+            self.managedObjectContext!.performBlock({ () -> Void in
+                var error: NSError? = nil
+                if self.managedObjectContext!.hasChanges {
+                    if !self.managedObjectContext!.save(&error) {
+                        println(error?.description)
+                    }
+                }
+                self.managedObjectContext?.reset()
+            })
+        })
+        dc.addObserverForName(NSPersistentStoreCoordinatorStoresDidChangeNotification, object: persistentStoreCoordinator, queue: NSOperationQueue.mainQueue(), usingBlock: { (note) -> Void in
+            println(NSPersistentStoreCoordinatorStoresDidChangeNotification)
+            self.managedObjectContext!.performBlock({ () -> Void in
+                var error: NSError? = nil
+                if self.managedObjectContext!.hasChanges {
+                    if !self.managedObjectContext!.save(&error) {
+                        println(error?.description)
+                    }
+                }
+            })
+        })
+        dc.addObserverForName(NSPersistentStoreDidImportUbiquitousContentChangesNotification, object: persistentStoreCoordinator, queue: NSOperationQueue.mainQueue(), usingBlock: { (note) -> Void in
+            println(NSPersistentStoreDidImportUbiquitousContentChangesNotification)
+            self.managedObjectContext!.performBlock({ () -> Void in
+                self.managedObjectContext!.mergeChangesFromContextDidSaveNotification(note)
+            })
+        })
+
+
         return true
     }
     
@@ -49,12 +78,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
     
-    // MARK: Notification
-    func storeDidChange(noti: NSNotification) {
-        var value: AnyObject? = store.stringForKey("test")
-        println("value: \(value)")
-        
-    }
+    lazy var cloudDirectory: NSURL = {
+        var fileManager = NSFileManager.defaultManager()
+        var teamID = "iCloud";
+        var bundleID = NSBundle.mainBundle().bundleIdentifier!
+        var cloudRoot = "\(teamID).\(bundleID)"
+        var cloudRootURL = fileManager.URLForUbiquityContainerIdentifier(cloudRoot)
+        return cloudRootURL!
+    }()
 
     // MARK: - Core Data stack
 
@@ -77,8 +108,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("Freedom.sqlite")
         println("url : \(url)")
         var error: NSError? = nil
+        
+        var storeOptional = [NSPersistentStoreUbiquitousContentNameKey: "iCloudStore", NSPersistentStoreUbiquitousContentURLKey: self.cloudDirectory]
         var failureReason = "There was an error creating or loading the application's saved data."
-        if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
+        if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: storeOptional, error: &error) == nil {
             coordinator = nil
             // Report any error we got.
             var dict = [String: AnyObject]()
@@ -109,6 +142,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Core Data Saving support
 
     func saveContext () {
+        println("saveContext")
         if let moc = self.managedObjectContext {
             var error: NSError? = nil
             if moc.hasChanges && !moc.save(&error) {
