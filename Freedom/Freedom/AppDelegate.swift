@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         let dc = NSNotificationCenter.defaultCenter()
-        dc.addObserverForName(NSPersistentStoreCoordinatorStoresWillChangeNotification, object: persistentStoreCoordinator, queue: NSOperationQueue.mainQueue(), usingBlock: { (note) -> Void in
+        dc.addObserverForName(NSPersistentStoreCoordinatorStoresWillChangeNotification, object: self.managedObjectContext?.persistentStoreCoordinator, queue: NSOperationQueue.mainQueue(), usingBlock: { (note) -> Void in
             println(NSPersistentStoreCoordinatorStoresWillChangeNotification)
             self.managedObjectContext!.performBlock({ () -> Void in
                 var error: NSError? = nil
@@ -27,11 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     if !self.managedObjectContext!.save(&error) {
                         println(error?.description)
                     }
+                } else {
+                    self.managedObjectContext?.reset()
                 }
-                self.managedObjectContext?.reset()
             })
         })
-        dc.addObserverForName(NSPersistentStoreCoordinatorStoresDidChangeNotification, object: persistentStoreCoordinator, queue: NSOperationQueue.mainQueue(), usingBlock: { (note) -> Void in
+        dc.addObserverForName(NSPersistentStoreCoordinatorStoresDidChangeNotification, object: self.managedObjectContext?.persistentStoreCoordinator, queue: NSOperationQueue.mainQueue(), usingBlock: { (note) -> Void in
             println(NSPersistentStoreCoordinatorStoresDidChangeNotification)
             self.managedObjectContext!.performBlock({ () -> Void in
                 var error: NSError? = nil
@@ -42,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             })
         })
-        dc.addObserverForName(NSPersistentStoreDidImportUbiquitousContentChangesNotification, object: persistentStoreCoordinator, queue: NSOperationQueue.mainQueue(), usingBlock: { (note) -> Void in
+        dc.addObserverForName(NSPersistentStoreDidImportUbiquitousContentChangesNotification, object: self.managedObjectContext?.persistentStoreCoordinator, queue: NSOperationQueue.mainQueue(), usingBlock: { (note) -> Void in
             println(NSPersistentStoreDidImportUbiquitousContentChangesNotification)
             self.managedObjectContext!.performBlock({ () -> Void in
                 self.managedObjectContext!.mergeChangesFromContextDidSaveNotification(note)
@@ -109,7 +110,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         println("url : \(url)")
         var error: NSError? = nil
         
-        var storeOptional = [NSPersistentStoreUbiquitousContentNameKey: "iCloudStore", NSPersistentStoreUbiquitousContentURLKey: self.cloudDirectory]
+        var storeOptional = [NSPersistentStoreUbiquitousContentNameKey: "iCloudStore"]
         var failureReason = "There was an error creating or loading the application's saved data."
         if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: storeOptional, error: &error) == nil {
             coordinator = nil

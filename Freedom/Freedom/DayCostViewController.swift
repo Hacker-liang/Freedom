@@ -24,7 +24,7 @@ class DayCostViewController: UIViewController, UINavigationControllerDelegate {
         
         var budgetManager = BudgetManager.shareInstance()
         var budget = budgetManager.createNewBudget()
-        budget.budgetName = "test"
+        budget.budgetName = "hahaha"
         budgetManager.saveBudgetChange()
     }
     
