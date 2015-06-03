@@ -24,8 +24,14 @@
 		D9120A251B0B305E0070B34F /* BudegtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9120A231B0B305E0070B34F /* BudegtViewController.swift */; };
 		D9120A281B0B3D530070B34F /* content_films@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9120A271B0B3D530070B34F /* content_films@2x.png */; };
 		D9120A2B1B0B3FB50070B34F /* cost_bkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9120A2A1B0B3FB50070B34F /* cost_bkg@2x.png */; };
+		D96C8D6E1B18477200C02E35 /* DayCostHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96C8D6D1B18477200C02E35 /* DayCostHeaderView.swift */; };
+		D96C8D721B184B4900C02E35 /* UAProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D96C8D711B184B4900C02E35 /* UAProgressView.m */; };
 		D9B55FD11B0B508800526D3F /* BudgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B55FD01B0B508800526D3F /* BudgetManager.swift */; };
 		D9B55FE81B0B8CC200526D3F /* Budget+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B55FE71B0B8CC200526D3F /* Budget+Extension.swift */; };
+		D9C0F44E1B1852F70043FCFA /* 1242@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9C0F44D1B1852F70043FCFA /* 1242@2x.png */; };
+		D9C0F4511B18544F0043FCFA /* DayCostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C0F44F1B18544F0043FCFA /* DayCostTableViewCell.swift */; };
+		D9C0F4521B18544F0043FCFA /* DayCostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9C0F4501B18544F0043FCFA /* DayCostTableViewCell.xib */; };
+		D9C0F45C1B189C4A0043FCFA /* RecordMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C0F45A1B189C4A0043FCFA /* RecordMoneyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +69,15 @@
 		D9120A231B0B305E0070B34F /* BudegtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudegtViewController.swift; sourceTree = "<group>"; };
 		D9120A271B0B3D530070B34F /* content_films@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "content_films@2x.png"; sourceTree = "<group>"; };
 		D9120A2A1B0B3FB50070B34F /* cost_bkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cost_bkg@2x.png"; sourceTree = "<group>"; };
+		D96C8D6D1B18477200C02E35 /* DayCostHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCostHeaderView.swift; sourceTree = "<group>"; };
+		D96C8D701B184B4900C02E35 /* UAProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAProgressView.h; sourceTree = "<group>"; };
+		D96C8D711B184B4900C02E35 /* UAProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAProgressView.m; sourceTree = "<group>"; };
 		D9B55FD01B0B508800526D3F /* BudgetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetManager.swift; sourceTree = "<group>"; };
 		D9B55FE71B0B8CC200526D3F /* Budget+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Budget+Extension.swift"; sourceTree = "<group>"; };
+		D9C0F44D1B1852F70043FCFA /* 1242@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1242@2x.png"; sourceTree = "<group>"; };
+		D9C0F44F1B18544F0043FCFA /* DayCostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCostTableViewCell.swift; sourceTree = "<group>"; };
+		D9C0F4501B18544F0043FCFA /* DayCostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayCostTableViewCell.xib; sourceTree = "<group>"; };
+		D9C0F45A1B189C4A0043FCFA /* RecordMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordMoneyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,14 +119,14 @@
 		D90D17DD1B0706CE00DFAD21 /* Freedom */ = {
 			isa = PBXGroup;
 			children = (
-				D9B55FE71B0B8CC200526D3F /* Budget+Extension.swift */,
 				D9B55FCF1B0B507400526D3F /* Model */,
 				D9120A291B0B3FA60070B34F /* Images */,
 				D9120A0C1B0B09720070B34F /* Libs */,
 				D90D18031B0706D600DFAD21 /* Freedom.entitlements */,
 				D90D17E01B0706CE00DFAD21 /* AppDelegate.swift */,
-				D9120A111B0B09E10070B34F /* DayCostViewController.swift */,
-				D9120A231B0B305E0070B34F /* BudegtViewController.swift */,
+				D96C8D6A1B1846CE00C02E35 /* DayCost */,
+				D9C0F45F1B189C6B0043FCFA /* Budget */,
+				D9C0F45E1B189C550043FCFA /* RecordMoney */,
 				D90D17E71B0706CE00DFAD21 /* Main.storyboard */,
 				D9120A271B0B3D530070B34F /* content_films@2x.png */,
 				D90D17EA1B0706CE00DFAD21 /* Images.xcassets */,
@@ -153,6 +166,7 @@
 		D9120A0C1B0B09720070B34F /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				D96C8D6F1B184B4900C02E35 /* UAProgressView */,
 				D9120A1C1B0B2C050070B34F /* CircularRevealAnimator */,
 				D9120A181B0B2BA20070B34F /* ZFModalTransitionAnimator */,
 			);
@@ -181,20 +195,74 @@
 		D9120A291B0B3FA60070B34F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D9C0F44D1B1852F70043FCFA /* 1242@2x.png */,
 				D9120A2A1B0B3FB50070B34F /* cost_bkg@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
 		};
+		D96C8D6A1B1846CE00C02E35 /* DayCost */ = {
+			isa = PBXGroup;
+			children = (
+				D9120A111B0B09E10070B34F /* DayCostViewController.swift */,
+				D96C8D6D1B18477200C02E35 /* DayCostHeaderView.swift */,
+				D9C0F44F1B18544F0043FCFA /* DayCostTableViewCell.swift */,
+				D9C0F4501B18544F0043FCFA /* DayCostTableViewCell.xib */,
+			);
+			name = DayCost;
+			sourceTree = "<group>";
+		};
+		D96C8D6F1B184B4900C02E35 /* UAProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				D96C8D701B184B4900C02E35 /* UAProgressView.h */,
+				D96C8D711B184B4900C02E35 /* UAProgressView.m */,
+			);
+			path = UAProgressView;
+			sourceTree = "<group>";
+		};
 		D9B55FCF1B0B507400526D3F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D9B55FD01B0B508800526D3F /* BudgetManager.swift */,
-				D9092BD61B0C2D0400F0F35F /* Cost.swift */,
-				D9092BD41B0C2D0300F0F35F /* Budget.swift */,
-				D9092BD81B0C320800F0F35F /* CostManager.swift */,
+				D9C0F5171B19744F0043FCFA /* Budget */,
+				D9C0F5181B1974570043FCFA /* Cost */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D9C0F45E1B189C550043FCFA /* RecordMoney */ = {
+			isa = PBXGroup;
+			children = (
+				D9C0F45A1B189C4A0043FCFA /* RecordMoneyViewController.swift */,
+			);
+			name = RecordMoney;
+			sourceTree = "<group>";
+		};
+		D9C0F45F1B189C6B0043FCFA /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				D9120A231B0B305E0070B34F /* BudegtViewController.swift */,
+			);
+			name = Budget;
+			sourceTree = "<group>";
+		};
+		D9C0F5171B19744F0043FCFA /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				D9B55FE71B0B8CC200526D3F /* Budget+Extension.swift */,
+				D9B55FD01B0B508800526D3F /* BudgetManager.swift */,
+				D9092BD41B0C2D0300F0F35F /* Budget.swift */,
+			);
+			name = Budget;
+			sourceTree = "<group>";
+		};
+		D9C0F5181B1974570043FCFA /* Cost */ = {
+			isa = PBXGroup;
+			children = (
+				D9092BD61B0C2D0400F0F35F /* Cost.swift */,
+				D9092BD81B0C320800F0F35F /* CostManager.swift */,
+			);
+			name = Cost;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +351,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C0F44E1B1852F70043FCFA /* 1242@2x.png in Resources */,
 				D90D17E91B0706CE00DFAD21 /* Main.storyboard in Resources */,
+				D9C0F4521B18544F0043FCFA /* DayCostTableViewCell.xib in Resources */,
 				D9120A2B1B0B3FB50070B34F /* cost_bkg@2x.png in Resources */,
 				D90D17EE1B0706CE00DFAD21 /* LaunchScreen.xib in Resources */,
 				D9120A281B0B3D530070B34F /* content_films@2x.png in Resources */,
@@ -307,17 +377,21 @@
 			files = (
 				D9120A131B0B09E10070B34F /* DayCostViewController.swift in Sources */,
 				D9120A1B1B0B2BA20070B34F /* ZFModalTransitionAnimator.m in Sources */,
+				D96C8D721B184B4900C02E35 /* UAProgressView.m in Sources */,
 				D90D17E41B0706CE00DFAD21 /* Freedom.xcdatamodeld in Sources */,
 				D9120A201B0B2C050070B34F /* AnimationDelegate.swift in Sources */,
 				D9B55FE81B0B8CC200526D3F /* Budget+Extension.swift in Sources */,
 				D9120A211B0B2C050070B34F /* CircularRevealAnimator.swift in Sources */,
 				D9092BD71B0C2D0400F0F35F /* Cost.swift in Sources */,
+				D9C0F45C1B189C4A0043FCFA /* RecordMoneyViewController.swift in Sources */,
 				D9B55FD11B0B508800526D3F /* BudgetManager.swift in Sources */,
 				D9120A221B0B2C050070B34F /* CircularRevealTransitionAnimator.swift in Sources */,
+				D96C8D6E1B18477200C02E35 /* DayCostHeaderView.swift in Sources */,
 				D90D17E11B0706CE00DFAD21 /* AppDelegate.swift in Sources */,
 				D9092BD91B0C320800F0F35F /* CostManager.swift in Sources */,
 				D9092BD51B0C2D0300F0F35F /* Budget.swift in Sources */,
 				D9120A251B0B305E0070B34F /* BudegtViewController.swift in Sources */,
+				D9C0F4511B18544F0043FCFA /* DayCostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

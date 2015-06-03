@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5ks-MJ-9Cz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5ks-MJ-9Cz">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Day Cost View Controller-->
@@ -17,38 +17,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1242.png" translatesAutoresizingMaskIntoConstraints="NO" id="u9C-AI-axK">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rG0-uN-2bC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cost_bkg.png" translatesAutoresizingMaskIntoConstraints="NO" id="NAO-3G-Zok">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="rG0-uN-2bC" secondAttribute="trailing" id="5hZ-Ee-Q7f"/>
-                            <constraint firstItem="rG0-uN-2bC" firstAttribute="top" secondItem="NAO-3G-Zok" secondAttribute="bottom" id="CR7-1h-q52"/>
+                            <constraint firstItem="u9C-AI-axK" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="76u-hn-udH"/>
                             <constraint firstItem="rG0-uN-2bC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="DqY-x8-AiZ"/>
                             <constraint firstItem="rG0-uN-2bC" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Idd-7E-mPK">
-                                <variation key="widthClass=compact" constant="164"/>
+                                <variation key="widthClass=compact" constant="64"/>
                             </constraint>
-                            <constraint firstItem="NAO-3G-Zok" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="JdW-VM-iGZ"/>
-                            <constraint firstItem="NAO-3G-Zok" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="NKz-Lc-VGg"/>
-                            <constraint firstAttribute="trailing" secondItem="NAO-3G-Zok" secondAttribute="trailing" id="S31-Rp-RFP"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="u9C-AI-axK" secondAttribute="bottom" id="KhR-z9-wfQ"/>
+                            <constraint firstItem="u9C-AI-axK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Ped-7p-RXJ"/>
+                            <constraint firstAttribute="trailing" secondItem="u9C-AI-axK" secondAttribute="trailing" id="gjS-EX-9qL"/>
                             <constraint firstItem="rG0-uN-2bC" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="kHh-No-YC1"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="u9C-AI-axK"/>
                                 <exclude reference="rG0-uN-2bC"/>
-                                <exclude reference="NAO-3G-Zok"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="JdW-VM-iGZ"/>
-                                <exclude reference="NKz-Lc-VGg"/>
-                                <exclude reference="S31-Rp-RFP"/>
+                                <exclude reference="KhR-z9-wfQ"/>
+                                <exclude reference="76u-hn-udH"/>
+                                <exclude reference="Ped-7p-RXJ"/>
+                                <exclude reference="gjS-EX-9qL"/>
                                 <exclude reference="5hZ-Ee-Q7f"/>
-                                <exclude reference="CR7-1h-q52"/>
                                 <exclude reference="DqY-x8-AiZ"/>
                                 <exclude reference="Idd-7E-mPK"/>
                                 <exclude reference="kHh-No-YC1"/>
@@ -56,15 +56,15 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="u9C-AI-axK"/>
                                 <include reference="rG0-uN-2bC"/>
-                                <include reference="NAO-3G-Zok"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="JdW-VM-iGZ"/>
-                                <include reference="NKz-Lc-VGg"/>
-                                <include reference="S31-Rp-RFP"/>
+                                <include reference="KhR-z9-wfQ"/>
+                                <include reference="76u-hn-udH"/>
+                                <include reference="Ped-7p-RXJ"/>
+                                <include reference="gjS-EX-9qL"/>
                                 <include reference="5hZ-Ee-Q7f"/>
-                                <include reference="CR7-1h-q52"/>
                                 <include reference="DqY-x8-AiZ"/>
                                 <include reference="Idd-7E-mPK"/>
                                 <include reference="kHh-No-YC1"/>
@@ -72,55 +72,50 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Gjj-YQ-seO"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="backGroundImageView" destination="u9C-AI-axK" id="ewh-QD-oEG"/>
+                        <outlet property="tableView" destination="rG0-uN-2bC" id="XxG-AL-Yhb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2121" y="412"/>
+            <point key="canvasLocation" x="2118" y="405"/>
         </scene>
-        <!--Budegt View Controller-->
+        <!--Record Money View Controller-->
         <scene sceneID="gIa-fk-LLt">
             <objects>
-                <viewController storyboardIdentifier="budgetCtl" id="e7m-Oy-1LQ" customClass="BudegtViewController" customModule="Freedom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecordMoneyViewController" id="e7m-Oy-1LQ" customClass="RecordMoneyViewController" customModule="Freedom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Iso-PR-1W3"/>
                         <viewControllerLayoutGuide type="bottom" id="jCb-fA-eCP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="em9-gL-8Ql">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="content_films.png" translatesAutoresizingMaskIntoConstraints="NO" id="9tX-qT-fa5">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vd-Yd-0kk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="new">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="138" y="268" width="125" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="createCostRecord:" destination="e7m-Oy-1LQ" eventType="touchUpInside" id="6Zs-MW-uBd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="9tX-qT-fa5" firstAttribute="top" secondItem="em9-gL-8Ql" secondAttribute="top" id="A1n-KI-hPu"/>
-                            <constraint firstItem="9tX-qT-fa5" firstAttribute="bottom" secondItem="jCb-fA-eCP" secondAttribute="top" id="hgF-90-i4Y"/>
-                            <constraint firstAttribute="trailing" secondItem="9tX-qT-fa5" secondAttribute="trailing" id="kor-tc-fXK"/>
-                            <constraint firstItem="9tX-qT-fa5" firstAttribute="leading" secondItem="em9-gL-8Ql" secondAttribute="leading" id="wyE-5O-Dwu"/>
-                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="9tX-qT-fa5"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="A1n-KI-hPu"/>
-                                <exclude reference="hgF-90-i4Y"/>
-                                <exclude reference="kor-tc-fXK"/>
-                                <exclude reference="wyE-5O-Dwu"/>
+                                <exclude reference="8Vd-Yd-0kk"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="9tX-qT-fa5"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="A1n-KI-hPu"/>
-                                <include reference="hgF-90-i4Y"/>
-                                <include reference="kor-tc-fXK"/>
-                                <include reference="wyE-5O-Dwu"/>
+                                <include reference="8Vd-Yd-0kk"/>
                             </mask>
                         </variation>
                     </view>
@@ -149,7 +144,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="content_films.png" width="320" height="568"/>
-        <image name="cost_bkg.png" width="320" height="320"/>
+        <image name="1242.png" width="621" height="1104"/>
     </resources>
 </document>

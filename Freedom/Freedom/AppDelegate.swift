@@ -17,10 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        
         let dc = NSNotificationCenter.defaultCenter()
         dc.addObserverForName(NSPersistentStoreCoordinatorStoresWillChangeNotification, object: self.managedObjectContext?.persistentStoreCoordinator, queue: NSOperationQueue.mainQueue(), usingBlock: { (note) -> Void in
-            println(NSPersistentStoreCoordinatorStoresWillChangeNotification)
+            println("********willChange")
             self.managedObjectContext!.performBlock({ () -> Void in
                 var error: NSError? = nil
                 if self.managedObjectContext!.hasChanges {
@@ -33,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         })
         dc.addObserverForName(NSPersistentStoreCoordinatorStoresDidChangeNotification, object: self.managedObjectContext?.persistentStoreCoordinator, queue: NSOperationQueue.mainQueue(), usingBlock: { (note) -> Void in
-            println(NSPersistentStoreCoordinatorStoresDidChangeNotification)
+            println("***********didChange")
             self.managedObjectContext!.performBlock({ () -> Void in
                 var error: NSError? = nil
                 if self.managedObjectContext!.hasChanges {
@@ -41,14 +40,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         println(error?.description)
                     }
                 }
+                NSNotificationCenter.defaultCenter().postNotificationName("updateDataSource", object: nil)
             })
         })
         dc.addObserverForName(NSPersistentStoreDidImportUbiquitousContentChangesNotification, object: self.managedObjectContext?.persistentStoreCoordinator, queue: NSOperationQueue.mainQueue(), usingBlock: { (note) -> Void in
+            println("***********ubiquitous")
             println(NSPersistentStoreDidImportUbiquitousContentChangesNotification)
             self.managedObjectContext!.performBlock({ () -> Void in
                 self.managedObjectContext!.mergeChangesFromContextDidSaveNotification(note)
+                NSNotificationCenter.defaultCenter().postNotificationName("updateDataSource", object: nil)
             })
         })
+        
+       
 
 
         return true
@@ -79,15 +83,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
     
-    lazy var cloudDirectory: NSURL = {
-        var fileManager = NSFileManager.defaultManager()
-        var teamID = "iCloud";
-        var bundleID = NSBundle.mainBundle().bundleIdentifier!
-        var cloudRoot = "\(teamID).\(bundleID)"
-        var cloudRootURL = fileManager.URLForUbiquityContainerIdentifier(cloudRoot)
-        return cloudRootURL!
-    }()
-
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {
@@ -135,7 +130,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if coordinator == nil {
             return nil
         }
-        var managedObjectContext = NSManagedObjectContext()
+//        var managedObjectContext = NSManagedObjectContext()
+//        managedObjectContext.persistentStoreCoordinator = coordinator
+//        return managedObjectContext
+        var managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+        managedObjectContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         managedObjectContext.persistentStoreCoordinator = coordinator
         return managedObjectContext
     }()

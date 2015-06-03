@@ -13,15 +13,15 @@ enum BudgetType: Int {
     case Food = 2
 }
 
-//extension Budget {
-//    func addChildBudget(budget: Budget) {
-//        var items = self.mutableSetValueForKey("childBudget");
-//        items.addObject(budget)
-//    }
-//    
-//    func removeChildBudget(budget: Budget) {
-//        var items = self.mutableSetValueForKey("childBudget");
-//        items.removeObject(budget)
-//    }
-//    
-//}
+extension Budget {
+    func addChildBudget(budget: Budget) {
+        var items = self.mutableSetValueForKey("childBudget");
+        items.addObject(budget)
+    }
+    
+    func removeChildBudget(budget: Budget) {
+        var items = self.mutableSetValueForKey("childBudget");
+        items.removeObject(budget)
+    }
+    
+}
