@@ -10,18 +10,51 @@ import UIKit
 
 class RecordMoneyViewController: UIViewController {
 
+    var backGroundImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+//        var backBtn = UIButton(frame: CGRectMake(0, 0, 40, 30))
+//        backBtn.setTitle("Back", forState: UIControlState.Normal)
+//        backBtn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+//        backBtn.addTarget(self, action: "backTo:", forControlEvents: UIControlEvents.TouchUpInside)
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backBtn)
+        backGroundImageView = UIImageView(frame: self.view.bounds)
+        backGroundImageView.image = UIImage(named: "1242.png")
+        self.view.addSubview(backGroundImageView)
+        self.addKeyboardView()
+        self.addCostCategoryView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.addKeyboardView()
 
-    @IBAction func createCostRecord(sender: AnyObject) {
+    }
+    
+    private func addKeyboardView() {
+        var keyboardCtl = KeyboardViewController()
+        self.addChildViewController(keyboardCtl)
+        keyboardCtl.view.frame = CGRectMake(0, self.view.bounds.size.height-212, self.view.bounds.size.width, 212)
+        self.view.addSubview(keyboardCtl.view)
+    }
+    
+    private func addCostCategoryView() {
+        var costCategoryView = CostCategoryViewController()
+        self.addChildViewController(costCategoryView)
+        costCategoryView.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, 240)
+        self.view.addSubview(costCategoryView.view)
+    }
+
+    func backTo(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func createCostRecord(sender: AnyObject) {
         var costManager = CostManager()
         var cost = costManager.createNewCost()
         cost.createTime = NSDate().timeIntervalSince1970

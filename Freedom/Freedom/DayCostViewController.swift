@@ -63,6 +63,7 @@ class DayCostViewController: UIViewController, UINavigationControllerDelegate, U
     private func showRecordCtl() {
         var recordCtl = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("RecordMoneyViewController") as! UIViewController
         recordCtl.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+//        var naviCtl = UINavigationController(rootViewController: recordCtl)
         self.presentViewController(recordCtl, animated: true) { () -> Void in
             
         }

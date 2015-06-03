@@ -26,6 +26,10 @@
 		D9120A2B1B0B3FB50070B34F /* cost_bkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9120A2A1B0B3FB50070B34F /* cost_bkg@2x.png */; };
 		D96C8D6E1B18477200C02E35 /* DayCostHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96C8D6D1B18477200C02E35 /* DayCostHeaderView.swift */; };
 		D96C8D721B184B4900C02E35 /* UAProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D96C8D711B184B4900C02E35 /* UAProgressView.m */; };
+		D9823E891B1F256900A1AE35 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9823E871B1F256900A1AE35 /* KeyboardViewController.swift */; };
+		D9823E8A1B1F256900A1AE35 /* KeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9823E881B1F256900A1AE35 /* KeyboardViewController.xib */; };
+		D9823E8E1B1F368800A1AE35 /* CostCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9823E8C1B1F368800A1AE35 /* CostCategoryViewController.swift */; };
+		D9823E931B1F3AE400A1AE35 /* CostItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9823E921B1F3AE400A1AE35 /* CostItem.swift */; };
 		D9B55FD11B0B508800526D3F /* BudgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B55FD01B0B508800526D3F /* BudgetManager.swift */; };
 		D9B55FE81B0B8CC200526D3F /* Budget+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B55FE71B0B8CC200526D3F /* Budget+Extension.swift */; };
 		D9C0F44E1B1852F70043FCFA /* 1242@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9C0F44D1B1852F70043FCFA /* 1242@2x.png */; };
@@ -72,6 +76,10 @@
 		D96C8D6D1B18477200C02E35 /* DayCostHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCostHeaderView.swift; sourceTree = "<group>"; };
 		D96C8D701B184B4900C02E35 /* UAProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAProgressView.h; sourceTree = "<group>"; };
 		D96C8D711B184B4900C02E35 /* UAProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAProgressView.m; sourceTree = "<group>"; };
+		D9823E871B1F256900A1AE35 /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		D9823E881B1F256900A1AE35 /* KeyboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardViewController.xib; sourceTree = "<group>"; };
+		D9823E8C1B1F368800A1AE35 /* CostCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostCategoryViewController.swift; sourceTree = "<group>"; };
+		D9823E921B1F3AE400A1AE35 /* CostItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostItem.swift; sourceTree = "<group>"; };
 		D9B55FD01B0B508800526D3F /* BudgetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetManager.swift; sourceTree = "<group>"; };
 		D9B55FE71B0B8CC200526D3F /* Budget+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Budget+Extension.swift"; sourceTree = "<group>"; };
 		D9C0F44D1B1852F70043FCFA /* 1242@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1242@2x.png"; sourceTree = "<group>"; };
@@ -221,6 +229,24 @@
 			path = UAProgressView;
 			sourceTree = "<group>";
 		};
+		D9823E8B1B1F365E00A1AE35 /* KeyboardViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D9823E871B1F256900A1AE35 /* KeyboardViewController.swift */,
+				D9823E881B1F256900A1AE35 /* KeyboardViewController.xib */,
+			);
+			name = KeyboardViewController;
+			sourceTree = "<group>";
+		};
+		D9823E901B1F369300A1AE35 /* CostCategoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D9823E8C1B1F368800A1AE35 /* CostCategoryViewController.swift */,
+				D9823E921B1F3AE400A1AE35 /* CostItem.swift */,
+			);
+			name = CostCategoryViewController;
+			sourceTree = "<group>";
+		};
 		D9B55FCF1B0B507400526D3F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				D9C0F45A1B189C4A0043FCFA /* RecordMoneyViewController.swift */,
+				D9823E8B1B1F365E00A1AE35 /* KeyboardViewController */,
+				D9823E901B1F369300A1AE35 /* CostCategoryViewController */,
 			);
 			name = RecordMoney;
 			sourceTree = "<group>";
@@ -354,6 +382,7 @@
 				D9C0F44E1B1852F70043FCFA /* 1242@2x.png in Resources */,
 				D90D17E91B0706CE00DFAD21 /* Main.storyboard in Resources */,
 				D9C0F4521B18544F0043FCFA /* DayCostTableViewCell.xib in Resources */,
+				D9823E8A1B1F256900A1AE35 /* KeyboardViewController.xib in Resources */,
 				D9120A2B1B0B3FB50070B34F /* cost_bkg@2x.png in Resources */,
 				D90D17EE1B0706CE00DFAD21 /* LaunchScreen.xib in Resources */,
 				D9120A281B0B3D530070B34F /* content_films@2x.png in Resources */,
@@ -376,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9120A131B0B09E10070B34F /* DayCostViewController.swift in Sources */,
+				D9823E931B1F3AE400A1AE35 /* CostItem.swift in Sources */,
 				D9120A1B1B0B2BA20070B34F /* ZFModalTransitionAnimator.m in Sources */,
 				D96C8D721B184B4900C02E35 /* UAProgressView.m in Sources */,
 				D90D17E41B0706CE00DFAD21 /* Freedom.xcdatamodeld in Sources */,
@@ -386,8 +416,10 @@
 				D9C0F45C1B189C4A0043FCFA /* RecordMoneyViewController.swift in Sources */,
 				D9B55FD11B0B508800526D3F /* BudgetManager.swift in Sources */,
 				D9120A221B0B2C050070B34F /* CircularRevealTransitionAnimator.swift in Sources */,
+				D9823E8E1B1F368800A1AE35 /* CostCategoryViewController.swift in Sources */,
 				D96C8D6E1B18477200C02E35 /* DayCostHeaderView.swift in Sources */,
 				D90D17E11B0706CE00DFAD21 /* AppDelegate.swift in Sources */,
+				D9823E891B1F256900A1AE35 /* KeyboardViewController.swift in Sources */,
 				D9092BD91B0C320800F0F35F /* CostManager.swift in Sources */,
 				D9092BD51B0C2D0300F0F35F /* Budget.swift in Sources */,
 				D9120A251B0B305E0070B34F /* BudegtViewController.swift in Sources */,
