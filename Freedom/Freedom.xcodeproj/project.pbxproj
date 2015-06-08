@@ -36,6 +36,7 @@
 		D9C0F4511B18544F0043FCFA /* DayCostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C0F44F1B18544F0043FCFA /* DayCostTableViewCell.swift */; };
 		D9C0F4521B18544F0043FCFA /* DayCostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9C0F4501B18544F0043FCFA /* DayCostTableViewCell.xib */; };
 		D9C0F45C1B189C4A0043FCFA /* RecordMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C0F45A1B189C4A0043FCFA /* RecordMoneyViewController.swift */; };
+		D9D63B1F1B25C50600011161 /* CaculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D63B1E1B25C50600011161 /* CaculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		D9C0F44F1B18544F0043FCFA /* DayCostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCostTableViewCell.swift; sourceTree = "<group>"; };
 		D9C0F4501B18544F0043FCFA /* DayCostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayCostTableViewCell.xib; sourceTree = "<group>"; };
 		D9C0F45A1B189C4A0043FCFA /* RecordMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordMoneyViewController.swift; sourceTree = "<group>"; };
+		D9D63B1E1B25C50600011161 /* CaculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 			children = (
 				D9823E871B1F256900A1AE35 /* KeyboardViewController.swift */,
 				D9823E881B1F256900A1AE35 /* KeyboardViewController.xib */,
+				D9D63B1E1B25C50600011161 /* CaculatorBrain.swift */,
 			);
 			name = KeyboardViewController;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				D96C8D721B184B4900C02E35 /* UAProgressView.m in Sources */,
 				D90D17E41B0706CE00DFAD21 /* Freedom.xcdatamodeld in Sources */,
 				D9120A201B0B2C050070B34F /* AnimationDelegate.swift in Sources */,
+				D9D63B1F1B25C50600011161 /* CaculatorBrain.swift in Sources */,
 				D9B55FE81B0B8CC200526D3F /* Budget+Extension.swift in Sources */,
 				D9120A211B0B2C050070B34F /* CircularRevealAnimator.swift in Sources */,
 				D9092BD71B0C2D0400F0F35F /* Cost.swift in Sources */,
