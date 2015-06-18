@@ -50,6 +50,11 @@ class KeyboardViewController: UIViewController {
             numberString += "\(sender.tag)"
             
         } else if sender.tag == 104 {
+            for char in totalString {
+                if char == "." {
+                    return
+                }
+            }
             totalString += "."
             numberString += "."
 
@@ -76,6 +81,11 @@ class KeyboardViewController: UIViewController {
             caculator.clearNumberStack()
             caculator.clearOperatorStack()
             println("result: \(result)")
+            
+        } else  if sender.tag == 102 {     //撤销键
+            totalString.removeAtIndex(totalString.startIndex)
+            numberString.removeAtIndex(numberString.startIndex)
+            
         }
         
         self.delegate.updateTotalString(totalString)

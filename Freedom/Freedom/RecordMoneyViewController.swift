@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol RecordMoneyViewControllerDelegate {
+    
+}
+
 class RecordMoneyViewController: UIViewController, KeyboardViewControllerDelegate {
 
     var backGroundImageView: UIImageView!
@@ -17,11 +21,6 @@ class RecordMoneyViewController: UIViewController, KeyboardViewControllerDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        var backBtn = UIButton(frame: CGRectMake(0, 0, 40, 30))
-//        backBtn.setTitle("Back", forState: UIControlState.Normal)
-//        backBtn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-//        backBtn.addTarget(self, action: "backTo:", forControlEvents: UIControlEvents.TouchUpInside)
-//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backBtn)
         backGroundImageView = UIImageView(frame: self.view.bounds)
         backGroundImageView.image = UIImage(named: "1242.png")
         self.view.addSubview(backGroundImageView)
@@ -32,6 +31,9 @@ class RecordMoneyViewController: UIViewController, KeyboardViewControllerDelegat
         self.view.addSubview(costLabel)
         self.addKeyboardView()
         self.addCostCategoryView()
+        
+        let gesture = UIPanGestureRecognizer(target: self, action: "handlePan:")
+        self.view.addGestureRecognizer(gesture)
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +43,6 @@ class RecordMoneyViewController: UIViewController, KeyboardViewControllerDelegat
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.addKeyboardView()
-
     }
     
     private func addKeyboardView() {
@@ -59,8 +60,15 @@ class RecordMoneyViewController: UIViewController, KeyboardViewControllerDelegat
         self.view.addSubview(costCategoryView.view)
     }
 
-    func backTo(sender: AnyObject) {
+    func backTo() {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func handlePan(gesture: UIPanGestureRecognizer) {
+        let point = gesture.translationInView(self.view)
+        if point.y < -180 {
+            self.backTo()
+        }
     }
     
     func createCostRecord(sender: AnyObject) {
