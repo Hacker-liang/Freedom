@@ -11,6 +11,8 @@ import UIKit
 protocol KeyboardViewControllerDelegate {
     
     func updateTotalString(totalStr: String)
+    
+    func finishRecord()
 }
 
 class KeyboardViewController: UIViewController {
@@ -45,11 +47,17 @@ class KeyboardViewController: UIViewController {
     */
     func keyboardAction(sender: UIButton) {
         println("\(sender.tag)")
-        if (sender.tag > 0 && sender.tag < 10) {
+        
+        if sender.tag == 103 {            //完成
+            delegate?.finishRecord()
+            return
+        }
+        
+        if (sender.tag > 0 && sender.tag < 10) {    //数字
             totalString += "\(sender.tag)"
             numberString += "\(sender.tag)"
             
-        } else if sender.tag == 104 {
+        } else if sender.tag == 104 {       //小数点
             for char in totalString {
                 if char == "." {
                     return
@@ -58,21 +66,21 @@ class KeyboardViewController: UIViewController {
             totalString += "."
             numberString += "."
 
-        } else if sender.tag == 100 {
+        } else if sender.tag == 100 {    // - 号键
             var numberStr = numberString as NSString
             caculator.pushNumber(numberStr.floatValue)
             caculator.pushOperator("-")
             totalString += "-"
             numberString = ""
             
-        } else if sender.tag == 101 {
+        } else if sender.tag == 101 {     // + 号键
             var numberStr = numberString as NSString
             caculator.pushNumber(numberStr.floatValue)
             caculator.pushOperator("+")
             totalString += "+"
             numberString = ""
             
-        } else if sender.tag == 103 {
+        } else if sender.tag == 103 {     //等号键
             var numberStr = numberString as NSString
             caculator.pushNumber(numberStr.floatValue)
             let result = caculator.getResult()
@@ -86,6 +94,11 @@ class KeyboardViewController: UIViewController {
             totalString.removeAtIndex(totalString.startIndex)
             numberString.removeAtIndex(numberString.startIndex)
             
+        } else if sender.tag == 105 {     //清空键
+            caculator.clearNumberStack()
+            caculator.clearOperatorStack()
+            totalString = ""
+            numberString = ""
         }
         
         self.delegate.updateTotalString(totalString)

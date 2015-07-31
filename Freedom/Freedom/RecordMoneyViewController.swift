@@ -10,6 +10,8 @@ import UIKit
 
 protocol RecordMoneyViewControllerDelegate {
     
+    func finishRecordOneCost(cost: Cost?)
+    
 }
 
 class RecordMoneyViewController: UIViewController, KeyboardViewControllerDelegate {
@@ -71,12 +73,13 @@ class RecordMoneyViewController: UIViewController, KeyboardViewControllerDelegat
         }
     }
     
-    func createCostRecord(sender: AnyObject) {
+    func createCostRecord() -> Cost? {
         var costManager = CostManager()
         var cost = costManager.createNewCost()
         cost.createTime = NSDate().timeIntervalSince1970
         cost.note = "测试 cost : \(NSDate().timeIntervalSince1970)"
         costManager.saveCostChange()
+        return cost
     }
     
     // MARK: KeyboardViewControllerDelegate
@@ -84,14 +87,8 @@ class RecordMoneyViewController: UIViewController, KeyboardViewControllerDelegat
     func updateTotalString(totalStr: String) {
         costLabel.text = totalStr
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func finishRecord() {
+        self.createCostRecord()
     }
-    */
-
 }
