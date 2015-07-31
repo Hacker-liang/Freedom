@@ -40,14 +40,14 @@ class CaculatorBrain: NSObject {
     }
     
     private func getOperatorResult() -> Float {
-        
         var result: Float = numberStack.first!
+        var printStr = "\(result)"
+
         for i in 0 ..< operatorStack.count {
             var secondNum = numberStack[i+1]
             var oper = operatorStack[i]
             
-            println("number: \(secondNum)")
-            println("operator: \(oper)")
+            printStr += "\(oper) \(secondNum)"
 
             switch oper {
             case "+" :
@@ -60,6 +60,10 @@ class CaculatorBrain: NSObject {
                 break
             }
         }
+        
+        printStr += "= \(result)"
+        println("\(printStr)")
+
         return result
     }
    

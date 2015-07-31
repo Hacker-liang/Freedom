@@ -48,7 +48,7 @@ class KeyboardViewController: UIViewController {
     func keyboardAction(sender: UIButton) {
         println("\(sender.tag)")
         
-        if sender.tag == 103 {            //完成
+        if sender.tag == 104 {            //完成
             delegate?.finishRecord()
             return
         }
@@ -91,8 +91,12 @@ class KeyboardViewController: UIViewController {
             println("result: \(result)")
             
         } else  if sender.tag == 102 {     //撤销键
-            totalString.removeAtIndex(totalString.startIndex)
-            numberString.removeAtIndex(numberString.startIndex)
+            if !totalString.isEmpty {
+                totalString.removeAtIndex(totalString.endIndex.predecessor())
+            }
+            if !numberString.isEmpty {
+                numberString.removeAtIndex(numberString.endIndex.predecessor())
+            }
             
         } else if sender.tag == 105 {     //清空键
             caculator.clearNumberStack()
