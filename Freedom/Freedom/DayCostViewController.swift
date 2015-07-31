@@ -116,10 +116,6 @@ class DayCostViewController: UIViewController, UINavigationControllerDelegate, U
         fakeBackGroundView.frame = frame
         headerView.updateHeaderView(contentOffsetY: offsetY)
     }
-
-    
-    
-    
     
 }
 
